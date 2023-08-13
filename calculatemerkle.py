@@ -26,4 +26,3 @@ def calculate_root(transactions):
 df = pd.read_csv('bitcoin_block_641818.csv')
 merkle_root = calculate_root(df)
 print(merkle_root)
-print(df.head(5))

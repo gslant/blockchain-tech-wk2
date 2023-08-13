@@ -18,12 +18,12 @@ while reward > 0.01:
 #print(height)
 #print(num_coins)
 
-#plt.plot(block_heights, block_rewards)
-#plt.xlabel("Block Height")
-#plt.ylabel("Block Reward")
-#lt.title("Block Reward vs Block Height")
-#plt.grid(True)
-#plt.show()
+plt.plot(block_heights, block_rewards)
+plt.xlabel("Block Height")
+plt.ylabel("Block Reward")
+plt.title("Block Reward vs Block Height")
+plt.grid(True)
+plt.show()
 
 height = 1
 reward = 50
@@ -44,13 +44,12 @@ while reward > 0.01:
 #redux_supply = redux_supply[::-1]
 #redux_rewards = redux_rewards[::-1]
 
-line = plt.plot(block_heights, redux_supply)
-#plt.gca().invert_xaxis()
-plt.xlabel("Block height")
-plt.ylabel("Supply remaining")
-plt.title("total supply decreasing")
-plt.grid(True)
-plt.show()
+#line = plt.plot(block_heights, redux_supply)
+#plt.xlabel("Block height")
+#plt.ylabel("Supply remaining")
+#plt.title("total supply decreasing")
+#plt.grid(True)
+#plt.show()
 
 
 

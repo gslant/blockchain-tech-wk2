@@ -18,8 +18,9 @@ def calculate_merkle_root(transactions):
 
         hashes = new_hashes
 
-    merkle_root = codecs.encode(hashes[0][::-1], 'hex')
-    return merkle_root.decode()
+    # Reverse the final hash to get the merkle root in big-endian order
+    merkle_root = hashes[0][::-1].hex()
+    return merkle_root
 
 def main():
     # Load the CSV file into a pandas DataFrame
