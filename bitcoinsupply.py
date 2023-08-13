@@ -33,7 +33,7 @@ redux_rewards = []
 
 total_supply = num_coins
 
-while reward > 1:
+while reward > 0.01:
     if(height % 210000 == 0):
         reward = reward / 2
     height += 1
@@ -41,18 +41,13 @@ while reward > 1:
     redux_supply.append(total_supply)
     redux_rewards.append(reward)
 
-redux_supply = redux_supply[::-1]
-redux_rewards = redux_rewards[::-1]
+#redux_supply = redux_supply[::-1]
+#redux_rewards = redux_rewards[::-1]
 
-print(f"start of rew {redux_rewards[0]}")
-print(f"start of sup  {redux_supply[0]}")
-print(f"end of rew  {redux_rewards[len(redux_rewards) -1]}")
-print(f"end of sup  {redux_supply[len(redux_supply) -1]}")
-
-line = plt.plot(redux_supply, redux_rewards)
-plt.gca().invert_xaxis()
-plt.xlabel("Total Supply")
-plt.ylabel("Block Reward")
+line = plt.plot(block_heights, redux_supply)
+#plt.gca().invert_xaxis()
+plt.xlabel("Block height")
+plt.ylabel("Supply remaining")
 plt.title("total supply decreasing")
 plt.grid(True)
 plt.show()
