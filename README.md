@@ -12,6 +12,8 @@ Question 3 - merkle.ipynb
 
 Question 4 - bitcoinsupply.ipynb
 
+Written answers are included at the end of each file
+
 ## Required Packages
 
 Hashlib
